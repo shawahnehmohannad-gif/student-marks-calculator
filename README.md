@@ -32,10 +32,15 @@ This project was created for learning and practice purposes.
    ```bash
    g++ main.cpp -o marks
 ./marks
+## Example
+
+**Input:**
 
 5
 70 80 90 60 50
 75
+
+**Output:**
 
 the average is 70
 the grade is C
