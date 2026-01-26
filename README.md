@@ -33,11 +33,10 @@ This project was created for learning and practice purposes.
    g++ main.cpp -o marks
 ./marks
 
-EXAMPLE
 5
 70 80 90 60 50
 75
-OUTPUT
+
 the average is 70
 the grade is C
 Congratulations! you passed!
