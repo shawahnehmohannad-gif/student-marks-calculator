@@ -32,7 +32,7 @@ void printResult(double avg){
      else cout<<"Sorry, you failed, better luck next time."<<endl ;
 }
 
- void main(){
+ int main(){
 int x,y;
 double sum=0;
 cout<<"enter the number of numbers "<<endl;
@@ -53,4 +53,5 @@ cin>>z;
 cout<<"the grade is "<<getMark(z)<<endl;
 cout<<"the result according to the average is "<<getResult(avg)<<endl;
 printResult(avg);
+    return 0;
 }
