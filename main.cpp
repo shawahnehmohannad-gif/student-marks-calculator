@@ -28,32 +28,37 @@ return 'F';}
 ////////
 void printResult(double avg){
     if(avg>=50)
-     cout<<"Congratulations! you passed!"<<endl;
-     else cout<<"Sorry, you failed, better luck next time."<<endl ;
+     cout<<"Congratulations! you passed!\n";
+     else cout<<"Sorry, you failed, better luck next time.\n" ;
 }
 
  int main(){
-int x,y;
+int numMarks,mark;
 int count=0;
 double sum=0;
-cout<<"Enter number of marks: "<<endl;
-cin>>x;
-cout<<"enter "<<x<<" marks"<<endl;
-for(int i=0;i<x;i++){
-cin>>y;
-if(y==-1)
-break;
-   sum+=y;
-   count++;
+cout<<"Enter number of marks: ";
+cin>>numMarks;
+cout<<"enter "<<numMarks<<" marks\n";
+for(int i=0;i<numMarks;i++){
+cin>>mark;
+if(mark==-1)
+break;  
+if (mark<0||mark>100) {
+cout << "Enter marks between 0 and 100 only\n" ;
+continue;
+}
+sum+=mark;
+count++;
 }
 if (count == 0) {
-    cout << "No valid marks entered." << endl;
+    cout << "No valid marks entered." ;
     return 0;
 }
 double avg=calcAvg(sum,count);
 cout<<"the average is "<<avg<<endl;
-cout<<"the  average grade is "<<getGrade(avg)<<endl;
+cout<<"the average grade is "<<getGrade(avg)<<endl;
 cout<<"the result according to the average is "<<getResult(avg)<<endl;
 printResult(avg);
     return 0;
 }
+
