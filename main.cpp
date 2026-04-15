@@ -4,7 +4,7 @@ double calcAvg(double sum,int num){
 double avg=sum/num;
 return avg;}
 ///////////
-char getMark(double mark){
+char getGrade(double mark){
    switch (int (mark)/10)
   {
     case 9:
@@ -34,23 +34,25 @@ void printResult(double avg){
 
  int main(){
 int x,y;
+int count=0;
 double sum=0;
-cout<<"enter the number of numbers "<<endl;
+cout<<"Enter number of marks: "<<endl;
 cin>>x;
 cout<<"enter "<<x<<" marks"<<endl;
-for(int i=1;i<=x;i++){
+for(int i=0;i<x;i++){
 cin>>y;
-sum+=y;
-if(y=='-1')
+if(y==-1)
 break;
+   sum+=y;
+   count++;
 }
-
-double avg=calcAvg(sum,x);
+if (count == 0) {
+    cout << "No valid marks entered." << endl;
+    return 0;
+}
+double avg=calcAvg(sum,count);
 cout<<"the average is "<<avg<<endl;
-double z;
-cout<<"enter the mark"<<endl;
-cin>>z;
-cout<<"the grade is "<<getMark(z)<<endl;
+cout<<"the  average grade is "<<getGrade(avg)<<endl;
 cout<<"the result according to the average is "<<getResult(avg)<<endl;
 printResult(avg);
     return 0;
